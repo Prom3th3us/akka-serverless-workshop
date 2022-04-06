@@ -27,27 +27,26 @@ jobs:
         with:
           protobuf: './src/main/protobuf/com/example/counter_api.proto'
         id: random-color-generator
-      - name: Get color
-        run: echo "The selected color is ${{ steps.random-color-generator.outputs.openapi }}"
-      - name: Save color
-        run: echo "The selected color is ${{ steps.random-color-generator.outputs.openapi }}" > color.txt
+      - name: Save openapi.json
+        run: echo "${{ steps.random-color-generator.outputs.openapi }}" > openapi.json
       - name: Read color
         run: |
-            # cat color.txt
+            # cat openapi.json
             # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
             git --version
             git config user.name "GitHub Actions Bot"
             git config user.email "<>"
             git status
             echo "Adding color.txt"
-            git add color.txt
+            git add openapi.json
             git stash 
             echo "Stashed"
             git branch
             git checkout gh-pages
             echo "Made checkout"
             git stash pop
-            echo "Adding color.txt"
+            echo "Adding openapi.json"
+            rm colot.txt
             git add color.txt
-            git commit -m "Update color.txt"
+            git commit -m "Update openapi.json"
             git push origin gh-pages
