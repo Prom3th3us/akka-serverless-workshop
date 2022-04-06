@@ -27,25 +27,13 @@ jobs:
         with:
           protobuf: './src/main/protobuf/com/example/counter_api.proto'
         id: proto---openapi
-      - name: Read color
+      - name: Update OpenAPI documentation
         run: |
             # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-            git --version
             git config user.name "GitHub Actions Bot"
             git config user.email "<>"
-            git status
-            echo "1 -- git status"
-            git branch
-            echo "4 -- git branch"
             git checkout gh-pages
-            echo "5 -- git checkout gh-pages"
-            rm openapi.json
-            echo "6 -- steps.proto---openapi.outputs.openapi"
             echo "${{ steps.proto---openapi.outputs.openapi }}" > openapi.json
-            echo "7 -- stash pop"
             git add openapi.json
-            echo "8 -- add openapi.json"
             git commit -m "Update openapi.json"
-            echo "9 -- commit"
             git push origin gh-pages -f
-            echo "10 -- git push origin gh-pages -f"
