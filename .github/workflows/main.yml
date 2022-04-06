@@ -37,10 +37,13 @@ jobs:
             git config user.name "GitHub Actions Bot"
             git config user.email "<>"
             git status
-            git tag
+            echo "Adding color.txt"
             git add color.txt
             git stash 
+            echo "Stashed"
             git checkout gh-pages
+            echo "Made checkout"
             git stash pop
+            echo "Adding color.txt"
             git add color.txt
             git commit -m "Update color.txt"
