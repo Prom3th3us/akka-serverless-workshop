@@ -26,9 +26,9 @@ jobs:
         uses: Prom3th3us/protobuf2swagger@onceMore
         with:
           protobuf: './src/main/protobuf/com/example/counter_api.proto'
-        id: proto--->openapi
+        id: proto---openapi
       - name: Save openapi.json
-        run: echo "${{ steps.proto--->openapi.outputs.openapi }}" > openapi.json
+        run: echo "${{ steps.proto---openapi.outputs.openapi }}" > openapi.json
       - name: Read color
         run: |
             # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
