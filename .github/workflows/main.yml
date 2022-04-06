@@ -41,6 +41,7 @@ jobs:
             git add color.txt
             git stash 
             echo "Stashed"
+            git branch
             git checkout gh-pages
             echo "Made checkout"
             git stash pop
