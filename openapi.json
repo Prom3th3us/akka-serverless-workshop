@@ -6,9 +6,9 @@
     "version": "1"
   },
   "paths": {
-    "/com.example.CounterService/IncreaseTiti": {
+    "/com.example.CounterService/IncreaseTitiTi": {
       "post": {
-        "operationId": "com.example.CounterService.IncreaseTiti",
+        "operationId": "com.example.CounterService.IncreaseTitiTi",
         "description": "",
         "requestBody": {
           "content": {
