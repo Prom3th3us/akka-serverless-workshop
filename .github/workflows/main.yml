@@ -29,3 +29,5 @@ jobs:
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.openapi }}"
       - name: Save color
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.openapi }}" > color.txt
+      - name: Read color
+        run: cat color.txt
