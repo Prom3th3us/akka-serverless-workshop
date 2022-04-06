@@ -23,5 +23,5 @@ jobs:
       - name: protobuf to openapi
         uses: Prom3th3us/protobuf2swagger@onceMore
         with:
-          protobuf: './src/main/protobuf/com.example/counter_api.proto'
+          protobuf: './src/main/protobuf/com/example/counter_api.proto'
 
