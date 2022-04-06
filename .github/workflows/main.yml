@@ -30,11 +30,15 @@ jobs:
       - name: Update OpenAPI documentation
         run: |
             ls
+            git add openapi.pipi
+            git stash
             # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
             git config user.name "GitHub Actions Bot"
             git config user.email "<>"
             git checkout gh-pages
-            echo "${{ steps.proto---openapi.outputs.openapi }}" > openapi.json
+            git stash pop
+            cat openapi.pipi > openapi.json
+            rm openapi.pipi
             if [[ `git status --porcelain` ]]; then
               git add openapi.json
               git commit -m "Update openapi.json"
