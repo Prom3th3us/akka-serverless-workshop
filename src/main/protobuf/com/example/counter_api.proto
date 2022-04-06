@@ -38,7 +38,7 @@ service CounterService {
     }
   };
 
-  rpc IncreaseTitiTi(IncreaseValue) returns (google.protobuf.Empty);
+  rpc IncreaseTitiTiTi(IncreaseValue) returns (google.protobuf.Empty);
   rpc Decrease(DecreaseValue) returns (google.protobuf.Empty);
   rpc Reset(ResetValue) returns (google.protobuf.Empty);
   rpc GetCurrentCounter(GetCounter) returns (CurrentCounter);
