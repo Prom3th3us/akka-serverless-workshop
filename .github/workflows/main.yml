@@ -35,10 +35,7 @@ jobs:
             git checkout gh-pages
             echo "${{ steps.proto---openapi.outputs.openapi }}" > openapi.json
             if [[ `git status --porcelain` ]]; then
-              # Changes ! -- update the docs.
               git add openapi.json
               git commit -m "Update openapi.json"
               git push origin gh-pages -f
-            else
-              # No need to update the documentation
             fi
