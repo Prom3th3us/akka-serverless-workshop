@@ -39,6 +39,9 @@ jobs:
             git stash pop
             cat openapi.pipi > openapi.json
             rm openapi.pipi
+            
+            git status
+            
             if [[ `git status --porcelain` ]]; then
               git add openapi.json
               git commit -m "Update openapi.json"
