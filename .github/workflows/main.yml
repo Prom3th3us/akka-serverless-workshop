@@ -24,4 +24,6 @@ jobs:
         uses: Prom3th3us/protobuf2swagger@onceMore
         with:
           protobuf: './src/main/protobuf/com/example/counter_api.proto'
-
+        id: random-color-generator
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.openapi }}"
