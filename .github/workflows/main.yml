@@ -52,4 +52,6 @@ jobs:
             git add openapi.json
             echo "8 -- add openapi.json"
             git commit -m "Update openapi.json"
+            echo "9 -- commit"
             git push origin gh-pages -f
+            echo "10 -- git push origin gh-pages -f"
