@@ -6,9 +6,9 @@
     version: 1
   },
   paths: {
-    /com.example.CounterService/IncreaseTintin: {
+    /com.example.CounterService/Increase: {
       post: {
-        operationId: com.example.CounterService.IncreaseTintin,
+        operationId: com.example.CounterService.Increase,
         description: ,
         requestBody: {
           content: {
