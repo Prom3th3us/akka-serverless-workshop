@@ -1,7 +1,5 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
-## Description
-<!--- Describe your changes in detail -->
 
 ## Related Issue
 <!--- This project only accepts pull requests related to open issues -->
@@ -12,7 +10,11 @@
 ## Motivation and Context
 <!--- Why is this change required? What problem does it solve? -->
 
-## How Has This Been Tested?
+## Description
+<!--- Describe your changes in detail -->
+
+## Highlights (optional)
+<!--- Is there anything you would like to highlight from your implementation? -->
 <!--- Please describe in detail how you tested your changes. -->
 <!--- Include details of your testing environment, and the tests you ran to -->
 <!--- see how your change affects other areas of the code, etc. -->
