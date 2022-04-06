@@ -38,7 +38,8 @@ jobs:
             git config user.email "<>"
             git status
             git tag
-            git stash color.txt
+            git add color.txt
+            git stash 
             git checkout gh-pages
             git stash pop
             git add color.txt
