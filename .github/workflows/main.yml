@@ -21,7 +21,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: protobuf to openapi
-        uses: Prom3th3us/protobuf2swagger@onceAgain
+        uses: Prom3th3us/protobuf2swagger@onceMore
         with:
           protobuf: './src/main/protobuf/com.example/counter_api.proto'
 
