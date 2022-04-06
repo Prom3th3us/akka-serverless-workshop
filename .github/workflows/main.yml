@@ -43,7 +43,7 @@ jobs:
             git status
             
             if [[ `git status --porcelain` ]]; then
-              git add openapi.json
+              git add -A
               git commit -m "Update openapi.json"
               git push origin gh-pages -f
             fi
