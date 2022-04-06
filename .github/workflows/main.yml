@@ -30,4 +30,16 @@ jobs:
       - name: Save color
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.openapi }}" > color.txt
       - name: Read color
-        run: cat color.txt
+        run: |
+          cat color.txt
+            # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+            git --version
+            git config user.name "GitHub Actions Bot"
+            git config user.email "<>"
+            git status
+            git tag
+            git stash color.txt
+            git checkout gh-pages
+            git stash pop
+            git add color.txt
+            git commit -m "Update color.txt"
